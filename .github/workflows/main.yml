@@ -3,7 +3,7 @@ name: Auto Update README
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Runs every 12 hours (UTC time)
+    - cron: "0 */6 * * *"  # Runs every 6 hours (UTC time)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
