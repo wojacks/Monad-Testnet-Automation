@@ -32,7 +32,7 @@ Ensure you have the following installed:
 1️⃣ Open a terminal and run:
 ```bash
 # Clone the repository
-git clone hhttps://github.com/wojacks/Monad-Testnet-Automation.git
+git clone https://github.com/wojacks/Monad-Testnet-Automation.git
 cd Monad-Testnet-Automation
 
 # Install dependencies
@@ -53,7 +53,7 @@ npm start
 1️⃣ Open **PowerShell** and run:
 ```powershell
 # Clone the repository
-git clone https://github.com/rpchubs/Monad-Testnet-Automation.git
+git clone https://github.com/wojacks/Monad-Testnet-Automation.git
 cd Monad-Testnet-Automation
 
 # Install dependencies
