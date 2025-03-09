@@ -81,7 +81,7 @@ class UniswapService extends BaseService {
         deadline,
         {
           value: amountInWei,
-          gasLimit: BigInt(500000),
+          gasLimit: BigInt(215405),
           nonce: nonce
         }
       );
@@ -121,7 +121,7 @@ class UniswapService extends BaseService {
         this.wallet.address,
         deadline,
         {
-          gasLimit: BigInt(500000),
+          gasLimit: BigInt(230465),
           nonce: nonce
         }
       );
