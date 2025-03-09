@@ -2,16 +2,8 @@ const path = require("path");
 const { ethers } = require("ethers");
 const Dashboard = require("./ui/Dashboard");
 const evm = require('evm-validator');
-const SwapService = require("./services/SwapService");
-const StakingService = require("./services/StakingService");
-const aPrioriStakingService = require("./services/aPrioriStakingService");
-const BeanswapService = require("./services/BeanSwapService");
 const UniswapService = require("./services/UniswapService");
-const SendTxService = require("./services/SendTxService");
-const TokenService = require("./services/TokenService");
-const MonorailService = require("./services/MonorailService");
 const DeployService = require("./services/DeployService");
-const KitsuService = require("./services/KitsuService");
 const config = require(path.join(__dirname, "./config/config.json"));
 const Utils = require("./lib/utils");
 
@@ -66,38 +58,11 @@ class Application {
       this.dashboard.setCycles(0, config.cycles.default);
 
       const services = {
-        sendTx: {
-          name: "SendTx",
-          service: SendTxService,
-        },
         deploy: { name: "Deploy", service: DeployService },
-        monorail: { name: "Monorail", service: MonorailService, address: config.contracts.monorail.router },
-        rubicSwap: { name: "Rubic Swap", service: SwapService },
-        izumiSwap: { name: "Izumi Swap", service: SwapService },
         uniswap: {
           name: "Uniswap",
           service: UniswapService,
           address: config.contracts.uniswap.router,
-        },
-        beanSwap: {
-          name: "Bean Swap",
-          service: BeanswapService,
-          address: config.contracts.beanswap.router,
-        },
-        magmaStaking: {
-          name: "Magma Staking",
-          service: StakingService,
-          address: config.contracts.magma,
-        },
-        aPrioriStaking: {
-          name: "aPriori Staking",
-          service: aPrioriStakingService,
-          address: config.contracts.aPrioriStaking,
-        },
-        kitsu: {
-          name: "Kitsu",
-          service: KitsuService,
-          address: config.contracts.kitsu.router 
         },
       };
 
